@@ -16,8 +16,8 @@ return new class extends Migration
             $table->string('image');
             $table->string('title');
             $table->string('slug');
-            $table->string('category_id')->unsigned();
-            $table->string('content');
+            $table->bigInteger('category_id')->unsigned();
+            $table->text('content');
             $table->timestamps();
         });
         Schema::create('post_tag', function (Blueprint $table) {
